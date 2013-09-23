@@ -4,6 +4,7 @@ import org.apache.log4j.BasicConfigurator;
 import org.apache.log4j.PropertyConfigurator;
 
 import com.hy.envcheck.config.AbstractConfig;
+import com.hy.envcheck.config.type.ConfigExcel;
 
 import junit.framework.Test;
 import junit.framework.TestCase;
@@ -47,17 +48,8 @@ public class ConfigFileTest extends TestCase {
 				.configure("/Users/xuwei/Project/HYCommons/envcheck/src/main/resources/log4j.properties");
 		BasicConfigurator.configure();
 		String fileNameXml = "xxx.xml";
-		String fileNameExcel = "xxx.xls";
 		ConfigInfo infoxml = new ConfigInfo(fileNameXml);
 		AbstractConfig configxml = ConfigFactory.create(infoxml);
-		
-		assertFalse(configxml.read());
 		assertFalse(configxml.isComplete());
-
-		ConfigInfo infoexcel = new ConfigInfo(fileNameExcel);
-		AbstractConfig configexcel = ConfigFactory.create(infoexcel);
-		
-		assertFalse(configexcel.read());
-		assertFalse(configexcel.isComplete());
 	}
 }

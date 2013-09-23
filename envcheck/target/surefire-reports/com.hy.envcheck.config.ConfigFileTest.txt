@@ -1,4 +1,11 @@
 -------------------------------------------------------------------------------
 Test set: com.hy.envcheck.config.ConfigFileTest
 -------------------------------------------------------------------------------
-Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.067 sec
+Tests run: 2, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.051 sec <<< FAILURE!
+testConfigFileLoad(com.hy.envcheck.config.ConfigFileTest)  Time elapsed: 0.009 sec  <<< ERROR!
+java.lang.NullPointerException
+	at com.hy.envcheck.config.type.ConfigXML.read(ConfigXML.java:19)
+	at com.hy.envcheck.config.AbstractConfig.<init>(AbstractConfig.java:23)
+	at com.hy.envcheck.config.type.ConfigXML.<init>(ConfigXML.java:12)
+	at com.hy.envcheck.config.ConfigFactory.create(ConfigFactory.java:11)
+	at com.hy.envcheck.config.ConfigFileTest.testConfigFileLoad(ConfigFileTest.java:51)

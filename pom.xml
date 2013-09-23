@@ -9,5 +9,6 @@
   <modules>
     <module>envcheck</module>
     <module>commonsjar</module>
+    <module>encryption</module>
   </modules>
 </project>

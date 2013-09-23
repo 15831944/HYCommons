@@ -1,0 +1,16 @@
+<config>
+	<checklist>
+		cpu,memory,space,apache,mysql,php,network
+	</checklist>
+	<excepted>
+		<cpu>
+			3.6
+		</cpu>
+		<memory>
+			2G
+		</memory>
+		<space>
+			2G
+		</space>
+	</excepted>
+</config>

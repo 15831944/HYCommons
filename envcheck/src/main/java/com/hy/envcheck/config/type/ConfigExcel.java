@@ -1,5 +1,6 @@
 package com.hy.envcheck.config.type;
 
+
 import com.hy.envcheck.config.AbstractConfig;
 import com.hy.envcheck.config.ConfigInfo;
 
@@ -11,7 +12,6 @@ public class ConfigExcel extends AbstractConfig {
 
 	@Override
 	protected boolean read() {
-		
 		return false;
 	}
 

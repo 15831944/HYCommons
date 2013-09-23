@@ -1,22 +1,40 @@
 package com.hy.envcheck.config;
 
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
+import com.envcheck.Error;
+import com.hy.envcheck.config.error.ConfigError;
 
 public abstract class AbstractConfig {
-
-	private static Log logger = LogFactory.getLog(AbstractConfig.class);
 
 	protected boolean status = false;
 
 	protected ConfigInfo info = null;
-
+	
+	private Error error = new ConfigError();
+	
 	public boolean isComplete() {
 		return status;
 	}
+	
+	protected void setComplete(boolean status) {
+		this.status = status;
+	}
+	
+	public ConfigInfo getInfo()
+	{
+		return info;
+	}
+	
+	public void setInfo(ConfigInfo info)
+	{
+		this.info = info;
+	}
+	
+	public Error getError() {
+		return error;
+	}
 
-	public AbstractConfig() {
-		this.read();
+	public void setError(Error error) {
+		this.error = error;
 	}
 
 	protected abstract boolean read();
